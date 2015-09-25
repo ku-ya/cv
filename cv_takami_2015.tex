@@ -1,0 +1,281 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{hanging}
+\usepackage{parskip}
+\usepackage{multicol}
+%\usepackage{tabular}
+\usepackage{enumitem}
+\usepackage[document]{ragged2e}
+%\usepackage{lastpage}
+%\usepackage{scrpage2}
+%\cfoot{\thepage\ of \pageref{LastPage}}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{\bf Kuya Takami}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{http://jblevins.org/projects/cv-template/}
+\fancyfoot{}
+\fancyhead{}
+\fancyfoot[L]{Page \thepage /2}
+\renewcommand{\headrulewidth}{0pt}
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+%  body={7in, 9in}
+  margin=20mm
+%  left=.0in,
+%  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{fancy}
+\markright{\name}
+%\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+%  \begin{list}{}{
+%    \setlength{\leftmargin}{1.5em}
+%  }
+%}{
+%  \end{list}
+%}
+
+\begin{document}
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\begin{minipage}{0.7\linewidth}
+\vspace{-6mm}
+\hspace{5mm}
+{\Huge \name}\\
+
+%Email:  \href{mailto:kuya@vt.edu}{\tt kuya@vt.edu} \\
+\vspace{2mm}\hspace{7mm}
+Website:  \href{http://www.cmsvt.org/Kuya}{\tt http://www.cmsvt.org/Kuya} \\
+\end{minipage}
+\begin{minipage}{0.6\linewidth} 
+      Phone:  540.230.3932\\
+	Email:  \href{mailto:kuya@vt.edu}{\tt kuya@vt.edu} \\
+%    Website:  \href{http://www.cmsvt.org/Kuya}{\tt http://www.cmsvt.org/Kuya} \\
+    460 Old Turner St.\\
+  100S Randolph Hall\\
+   Blacksburg, VA 24061\\
+\end{minipage}
+\vspace{-13mm}
+\section*{EDUCATION}
+\vspace{-2mm}
+\hrule
+
+\begin{center}
+\begin{minipage}{0.55\columnwidth}
+{\bf Virginia Polytechnic Institute and State University}\hspace{1mm} 2015\\
+\hspace{2mm}Ph.D.  Mechanical Engineering  \\ 
+\hspace{4mm} Thesis: ``Non-Field-of-View Acoustic Target Estimation''\\
+\hspace{28mm} Advisor: Professor Tomonari Furukawa
+\end{minipage}
+\hfill
+\begin{minipage}{0.44\columnwidth}
+{\bf University of Wisconsin-Madison} \hfill {\em2011} \\ 
+\hspace{5mm} M.S. Mechanical Engineering \\
+\hspace{10mm} Advisor: Professor Scott Sanders\\
+{\bf University of Wisconsin-Madison} \hfill {\em2008} \\ 
+\hspace{5mm}B.S. Biomedical Engineering (Biomechanics)
+\end{minipage}
+\end{center}
+\vspace{-7mm}
+\section*{APPOINTMENTS}
+\vspace{-2mm}
+\hrule
+\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }{(09/2015 - Present)}\\
+{\bfseries Postdoctoral Researcher}
+
+%\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }
+{\bfseries Graduate Research Assistant/ *Graduate Teaching Assistant}\hfill {(08/2011 - 09/2015)}\\
+\begin{itemize}
+\item Developed non-line-of-sight (NLOS) hybrid optical/acoustical target localization scheme to model and predict the state of sound source in a complex environment.
+\item Modeled sound reflection/diffraction based NLOS target estimation for mobile robot localization.
+\item Assisted underwater autonomous navigation project on sonar localization simulation using simultaneous localization and mapping (SLAM) for NSF Naval Research Laboratory.
+\item Worked on real-time autonomous driving using Grid-based SLAM in collaboration with ZMP and University of Technology, Sydney.
+\item Worked on tire noise prediction model entailing mathematical formulations, and fluid-solid interaction modeling funded by NSF Center for Tire Research.
+\item *Instructor (ME 2024-Engineering Design and Economics): Lectured mechanical engineering students on product development.
+%\item *Laboratory Assistant (ME4005/4006): Instructed and organized junior/ senior mechanical engineering labs and graded technical reports.
+\item *Project Advisor (ME4015/4016): Supervised senior design project on autonomous driving, and automotive alternator design and experimental validation. 
+\end{itemize}
+
+\MakeUppercase{\bf Bridgestone Americas, Inc}\hfill{Akron, OH}{ (05 - 08/2014)}\\
+{\bf Advanced Tire Technology - Research intern}
+\begin{itemize}
+\item Developed tire noise analysis procedure and designed and implemented tire noise experimental device based on an FPGA controller.
+\end{itemize}
+
+\MakeUppercase{\bf ZMP, Inc}\hfill{Tokyo, Japan }{(01 - 07/2013)}\\
+{\bf Research Engineer in Autonomous Vehicles}
+\begin{itemize}
+\item Assisted programming and hardware development for an autonomous driving vehicle, including data acquisition, implementation of SLAM, and vehicle modeling/control.
+\item Designed and constructed a quadrupedal machine learning-based evolving robot by calculating kinematics and specifying components.
+\end{itemize}
+
+\MakeUppercase{\bf University of Wisconsin-Madison}\hfill{Madison, WI}{ (03/2009 - 08/2011)}\\{\bf Graduate Research Assistant for Engine Research Center}
+\begin{itemize}
+\item Conducted laser and fiber optics centered research optimizing optical element design in harsh environments. 
+\item Developed a noninvasive laser grid tomography temperature measurement system for jet and IC engines.
+\end{itemize}
+
+\MakeUppercase{\bf University of Wisconsin Hospital}\hfill{Madison, WI}{ {(08/2007 - 12/2008)}}\\{\bf MRI Research Assistant for Radiology Department}
+\begin{itemize}
+\item Studied MRI-based knee analysis, quantified quality of the image, and determined change of cartilage volumes.
+\end{itemize}
+
+\vspace{-5mm}
+\section*{HONORS AND AWARDS}
+\vspace{-2mm}
+\hrule
+\hspace{10mm}
+\begin{minipage}{\columnwidth}
+\begin{minipage}{0.5\columnwidth}
+\begin{tabular}{l l}
+2007 & Most Outstanding Physics Award$^\dagger$ \\
+2012 & Pratt Graduate Fellowship$^\ddagger$\\
+2015 & ASME:IDETC/CIE Best Student Paper Award\\
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\columnwidth}
+\begin{tabular}{l l}
+2011 & Pratt Graduate Fellowship$^\ddagger$ \\
+2014 & Pratt Graduate Fellowship$^\ddagger$\\ 
+\end{tabular}
+\end{minipage}
+\\
+\vspace{5mm}
+$\dagger$: Scholarship to the best student in two semester physics courses at University of Wisconsin-EC\\
+$\ddagger$: Awarded to students who are aggressively recruited by other top engineering colleges\\
+\end{minipage}
+
+\vspace{-5mm}
+\section*{TECHNICAL STRENGTH}
+\vspace{-2mm}
+\hrule
+\hspace{10mm}
+\begin{minipage}{0.9\columnwidth}
+\begin{minipage}{0.4\columnwidth}
+\begin{tabular}{ll}
+Computer Languages: & C/C++, Java\\
+Software: & ROS, MATLAB, Visual Studio \\
+CAD \& FEA: & SolidWorks, PTC Creo, Abaqus\\
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\columnwidth}
+\begin{tabular}{ll}
+System: & Windows, Linux, OS X\\
+Languages: & Japanese (native)\\
+\end{tabular}
+\end{minipage}
+\end{minipage}
+
+\vspace{-5mm}
+\section*{EXTRACURRICULAR EXPERIENCE}
+\vspace{-2mm}
+\hrule
+\hspace{10mm}
+\begin{minipage}{\columnwidth}
+\begin{tabular}{ l  l }
+Organization & Mechanical Engineering Graduate Student Council (2013-2015)\\
+& Mechanical Engineering Graduate Ambassador (2013-2015)\\ 
+& President of VT Slackline Club (2011-2014)\\
+& President of Japanese Conversation Group (2012-2015)\\
+& President of Japanese Cultural Society in University of Wisconsin-EC (2005-2006)\\
+Volunteer & Graduate student mentor (2014-Present)\\
+Society & National Society of Leadership and Success, Biomedical Engineering Society
+\end{tabular}
+\end{minipage}
+
+\vspace{-5mm}
+\section*{PUBLICATIONS}
+\vspace{-2mm}
+\hrule
+\begin{itemize}[label={}]
+\item {\bf K. Takami}, T. Furukawa, M. Kumon, D. Kimoto, and G. Dissanayake. ``Estimation of a nonvisible field-of-view mobile target incorporating optical and acoustic sensors,'' Autonomous Robots, 2015.
+
+\item {\bf K. Takami}, T. Furukawa, M. Kumon, and G. Dissanayake. ``Non-Field-of-View Acoustic Target Estimation in Complex Indoor Environment,'' Springer Tracts in Advanced Robotics, 2015.
+
+\item  {\bf K. Takami}, T. Furukawa, M. Kumon, and L. Mak,``Non-Field-of-View Indoor Sound Source Localization based on Reflection and Diffraction,'' Multi-sensor Integration and Fusion, IEEE, 2015.
+
+\item {\bf K. Takami}, T. Furukawa, M. Kumon, and G. Dissanayake. ``Non-Field-of-View Acoustic Target Estimation in Complex Indoor Environment,'' Field and Service Robotics, 2015.
+
+\item  T. Furukawa, {\bf K. Takami}, X. Tong, D. Watman, A. Hamed, R. Ranasinghe and G. Dissayanake,``Map-based Navigation of an Autonomous Car Using Grid-based Scan-to-Map Matching,'' ASME IDETC, 2015.
+
+\item  {\bf K. Takami} and T. Furukawa,``High-Resolution Deformation Measurement System for Fast Rotating Tire,'' ASME IDETC/CIE, 2015.
+
+
+
+\item  {\bf K. Takami} and T. Furukawa,``High-Resolution Deformation Measurement System for Fast Rotating Tires Towards Noise Prediction,'' Euronoise., 2015.
+
+\item M. Kumon, D. Kimoto, {\bf K. Takami} and T. Furukawa, ``Acoustic recursive Bayesian estimation for non-field-of-view targets,'' In Image Analysis for Multimedia Interactive Services (WIAMIS), IEEE, 2013.
+
+\item M. Kumon, D. Kimoto, {\bf K. Takami} and T. Furukawa. ``Bayesian non-field-of-view target estimation incorporating an acoustic sensor,'' In Intelligent Robots and Systems, IEEE/RSJ International Conference, 2013.
+
+\item {\bf K. Takami}, S. Taheri, M. Taheri and T. Furukawa, ``Prediction of Railroad Track Foundation Defects Using Wavelets,'' Joint Rail Conference, ASME, 2013.
+
+\item J. M. Whitney, {\bf K. Takami}, S. T. Sanders, and Y. Okura. ``Design of system for rugged, low-noise fiber-optic access to high-temperature, high-pressure environments,'' Sensors Journal, IEEE, 2011.
+
+\item A. Xinliang, T. Kraetschmer, {\bf K. Takami}, S. T. Sanders, L. Ma, et al. ``Validation of temperature imaging by H$_2$O absorption spectroscopy using hyperspectral tomography in controlled experiments,'' Journal of Applied Optics, 2011.
+\end{itemize}
+\fancyhead[R]{Takami-CV}
+
+%\fancyfoot{
+%\begin{center}
+%  \begin{footnotesize}
+%    Last updated: \today \\
+%  \end{footnotesize}
+%\end{center}
+%}
+\end{document}
