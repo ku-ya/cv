@@ -8,21 +8,16 @@
 % required in any resulting documents. I do ask that you please leave
 % this notice and the above URL in the source code if you choose to
 % redistribute this file.
+\documentclass[11pt,letterpaper]{article}
 
-\documentclass[12pt,letterpaper]{article}
-
-\usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{url}
 \usepackage{hanging}
 \usepackage{parskip}
 \usepackage{multicol}
-%\usepackage{tabular}
 \usepackage{enumitem}
 \usepackage[document]{ragged2e}
-%\usepackage{lastpage}
-%\usepackage{scrpage2}
-%\cfoot{\thepage\ of \pageref{LastPage}}
+\usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage{tocloft}
 % Comment the following lines to use the default Computer Modern font
@@ -30,16 +25,18 @@
 % Remove the 'osf' bit if you don't like the old style figures.
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
+\usepackage{xcolor}
+\usepackage[colorlinks=false,linkcolor=black]{hyperref}
 
 % Set your name here
-\def\name{\bf Kuya Takami}
+\def\name{\bf Kuya Takami, Ph.D.}
 
 % Replace this with a link to your CV if you like, or set it empty
 % (as in \def\footerlink{}) to remove the link in the footer:
 \def\footerlink{http://jblevins.org/projects/cv-template/}
 \fancyfoot{}
 \fancyhead{}
-\fancyfoot[L]{Page \thepage /2}
+\fancyfoot[L]{Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 % The following metadata will show up in the PDF properties
 \hypersetup{
@@ -54,16 +51,16 @@
 
 \geometry{
 %  body={7in, 9in}
-  margin=20mm
-%  left=.0in,
-%  top=1.25in
+  margin=1in,
+  left=20mm,
+  right=20mm
 }
 
 % Customize page headers
 \pagestyle{fancy}
 \markright{\name}
 %\thispagestyle{empty}
-
+\rhead{Takami-CV}
 % Custom section fonts
 \usepackage{sectsty}
 \sectionfont{\rmfamily\mdseries\Large}
@@ -90,21 +87,20 @@
 
 \begin{document}
 % Alternatively, print name centered and bold:
-%\centerline{\huge \bf \name}
-
+%\centerline{\huge \bf \name}\
+\rhead{}
 \begin{minipage}{0.7\linewidth}
-\vspace{-6mm}
-\hspace{5mm}
 {\Huge \name}\\
 
 %Email:  \href{mailto:kuya@vt.edu}{\tt kuya@vt.edu} \\
-\vspace{0mm}\hspace{7mm}
-Website:  \href{http://www.me.vt.edu/cms/people/kuya-takami/}{\tt http://www.me.vt.edu/cms/people/kuya-takami/} \\
-\hspace{7mm}
+\vspace{5mm}\hspace{4mm}
+Website:  \href{http://www.me.vt.edu/cms/people/kuya-takami}{\tt http://www.me.vt.edu/cms/people/kuya-takami} \\
+\hspace{4mm}
 GitHub: \href{https://github.com/ku-ya}{\tt https://github.com/ku-ya}\\
-\hspace{7mm}
+\hspace{4mm}
 LinkedIn:  \href{https://www.linkedin.com/in/kuyat}{\tt ttps://www.linkedin.com/in/kuyat} \\
 \end{minipage}
+\hspace{2mm}
 \begin{minipage}{0.6\linewidth} 
       Phone:  540.230.3932\\
 	Email:  \href{mailto:kuya@vt.edu}{\tt kuya@vt.edu} \\
@@ -113,35 +109,38 @@ LinkedIn:  \href{https://www.linkedin.com/in/kuyat}{\tt ttps://www.linkedin.com/
   100S Randolph Hall\\
    Blacksburg, VA 24061\\
 \end{minipage}
-\vspace{-10mm}
-\section*{EDUCATION}
-\vspace{-2mm}
-\hrule
 
-\begin{center}
-\begin{minipage}{0.55\columnwidth}
+\section*{EDUCATION}\vspace{-3mm}
+\hrule
+\begin{minipage}{\columnwidth}
 {\bf Virginia Polytechnic Institute and State University}\hspace{1mm} 2015\\
-\hspace{2mm}Ph.D.  Mechanical Engineering  \\ 
-\hspace{4mm} Thesis: ``Non-Field-of-View Acoustic Target Estimation''\\
-\hspace{28mm} Advisor: Professor Tomonari Furukawa
+\hspace{5mm}Ph.D.  Mechanical Engineering   \\
+\hspace{10mm}
+{\it Thesis: ``Non-Field-of-View Acoustic Target Estimation''} Advisor: Professor Tomonari Furukawa
 \end{minipage}
-\hfill
-\begin{minipage}{0.44\columnwidth}
+
+\vspace{3mm}
+\begin{minipage}{0.45\columnwidth}
 {\bf University of Wisconsin-Madison} \hfill {\em2011} \\ 
 \hspace{5mm} M.S. Mechanical Engineering \\
 \hspace{10mm} Advisor: Professor Scott Sanders\\
+\end{minipage}%
+\hfill
+\begin{minipage}{0.5\columnwidth}
 {\bf University of Wisconsin-Madison} \hfill {\em2008} \\ 
 \hspace{5mm}B.S. Biomedical Engineering (Biomechanics)
 \end{minipage}
-\end{center}
-\vspace{-8mm}
-\section*{APPOINTMENTS}
-\vspace{-2mm}
+
+
+\section*{APPOINTMENTS}\vspace{-3mm}
 \hrule
-\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }{(10/2015 - Present)}\\
-{\bfseries Postdoctoral Researcher}
+\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }\\
+{\bfseries Postdoctoral Researcher}-Computational Multiphysics and Systems Lab with Professor Tomonari Furuakwa\hfill{(10/2015 - Present)}\\
+\begin{itemize}
+	\item Leader of MBZIRC mobile manipulator team
+\end{itemize}
 %\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }
-\hspace{5mm}{\bfseries Graduate Research Assistant/ *Graduate Teaching Assistant}\hfill {(08/2011 - 09/2015)}\\
+{\bfseries Graduate Research Assistant/ *Graduate Teaching Assistant}\hfill {(08/2011 - 09/2015)}\\
 \begin{itemize}
 \item Developed non-line-of-sight (NLOS) hybrid optical/acoustical target localization scheme to model and predict the state of sound source in a complex environment.
 \item Modeled sound reflection/diffraction based NLOS target estimation for mobile robot localization.
@@ -154,36 +153,35 @@ LinkedIn:  \href{https://www.linkedin.com/in/kuyat}{\tt ttps://www.linkedin.com/
 \end{itemize}
 
 \MakeUppercase{\bf Bridgestone Americas, Inc}\hfill{Akron, OH}{ (05 - 08/2014)}\\
-\hspace{5mm}{\bf Advanced Tire Technology - Research intern}
+{\bf Advanced Tire Technology - Research intern}
 \begin{itemize}
 \item Developed tire noise analysis procedure and designed and implemented tire noise experimental device based on an FPGA controller.
 \end{itemize}
 
 \MakeUppercase{\bf ZMP, Inc}\hfill{Tokyo, Japan }{(01 - 07/2013)}\\
-\hspace{5mm}{\bf Research Engineer in Autonomous Vehicles}
+{\bf Research Engineer in Autonomous Vehicles}
 \begin{itemize}
 \item Assisted programming and hardware development for an autonomous driving vehicle, including data acquisition, implementation of SLAM, and vehicle modeling/control.
 \item Designed and constructed a quadrupedal machine learning-based evolving robot by calculating kinematics and specifying components.
 \end{itemize}
 
 \MakeUppercase{\bf University of Wisconsin-Madison}\hfill{Madison, WI}{ (03/2009 - 08/2011)}\\
-\hspace{5mm}{\bf Graduate Research Assistant for Engine Research Center}
+{\bf Graduate Research Assistant for Engine Research Center}
 \begin{itemize}
 \item Conducted laser and fiber optics centered research optimizing optical element design in harsh environments. 
 \item Developed a noninvasive laser grid tomography temperature measurement system for jet and IC engines.
 \end{itemize}
 
 \MakeUppercase{\bf University of Wisconsin Hospital}\hfill{Madison, WI}{ {(08/2007 - 12/2008)}}\\
-\hspace{5mm}{\bf MRI Research Assistant for Radiology Department}
+{\bf MRI Research Assistant for Radiology Department}
 \begin{itemize}
 \item Studied MRI-based knee analysis, quantified quality of the image, and determined change of cartilage volumes.
 \end{itemize}
 
 \vspace{-5mm}
-\section*{HONORS AND AWARDS}
-\vspace{-2mm}
+\section*{HONORS AND AWARDS}\vspace{-3mm}
 \hrule
-\hspace{10mm}
+\hspace{0mm}
 \begin{minipage}{\columnwidth}
 \begin{minipage}{0.5\columnwidth}
 \begin{tabular}{l l}
@@ -192,7 +190,8 @@ LinkedIn:  \href{https://www.linkedin.com/in/kuyat}{\tt ttps://www.linkedin.com/
 2015 & ASME:IDETC/CIE Best Student Paper Award\\
 \end{tabular}
 \end{minipage}
-\begin{minipage}{0.5\columnwidth}
+\hfill
+\begin{minipage}{0.4\columnwidth}
 \begin{tabular}{l l}
 2011 & Pratt Graduate Fellowship$^\ddagger$ \\
 2014 & Pratt Graduate Fellowship$^\ddagger$\\ 
@@ -204,33 +203,26 @@ $\dagger$: Scholarship to the best student in two semester physics courses at Un
 $\ddagger$: Awarded to students who are aggressively recruited by other top engineering colleges\\
 \end{minipage}
 
-\vspace{-5mm}
-\section*{TECHNICAL STRENGTH}
-\vspace{-2mm}
+\section*{TECHNICAL STRENGTH}\vspace{-3mm}\rhead{Takami-CV}
 \hrule
-\hspace{10mm}
-\begin{minipage}{0.9\columnwidth}
-\begin{minipage}{0.4\columnwidth}
+
+\begin{minipage}{0.58\columnwidth}
 \begin{tabular}{ll}
-Computer Languages: & C/C++, Java\\
-Software: & ROS, MATLAB, Visual Studio \\
-CAD \& FEA: & SolidWorks, PTC Creo, Abaqus\\
+Computer Languages:& C/C++, Java\\
+Software:& ROS, MATLAB, Visual Studio \\
+CAD \& FEA:& SolidWorks, PTC Creo, Abaqus\\
 \end{tabular}
 \end{minipage}
-\hfill
-\begin{minipage}{0.4\columnwidth}
+\begin{minipage}{0.35\columnwidth}
 \begin{tabular}{ll}
 System: & Windows, Linux, OS X\\
-Languages: & Japanese (native)\\
+Languages: & English, Japanese (native)\\
 \end{tabular}
 \end{minipage}
-\end{minipage}
 
-\vspace{-5mm}
-\section*{EXTRACURRICULAR EXPERIENCE}
-\vspace{-2mm}
+\section*{EXTRACURRICULAR EXPERIENCE}\vspace{-3mm}
+
 \hrule
-\hspace{10mm}
 \begin{minipage}{\columnwidth}
 \begin{tabular}{ l  l }
 Organization & Mechanical Engineering Graduate Student Council (2013-2015)\\
@@ -243,9 +235,7 @@ Society & National Society of Leadership and Success, Biomedical Engineering Soc
 \end{tabular}
 \end{minipage}
 
-\vspace{-5mm}
-\section*{PUBLICATIONS}
-\vspace{-2mm}
+\section*{PUBLICATIONS}\vspace{-3mm}
 \hrule
 \begin{itemize}[label={}]
 \item {\bf K. Takami}, T. Furukawa, M. Kumon, D. Kimoto, and G. Dissanayake. ``Estimation of a nonvisible field-of-view mobile target incorporating optical and acoustic sensors,'' Autonomous Robots, 2015.
@@ -256,7 +246,7 @@ Society & National Society of Leadership and Success, Biomedical Engineering Soc
 
 \item {\bf K. Takami}, T. Furukawa, M. Kumon, and G. Dissanayake. ``Non-Field-of-View Acoustic Target Estimation in Complex Indoor Environment,'' Field and Service Robotics, 2015.
 
-\item  T. Furukawa, {\bf K. Takami}, X. Tong, D. Watman, A. Hamed, R. Ranasinghe and G. Dissayanake,``Map-based Navigation of an Autonomous Car Using Grid-based Scan-to-Map Matching,'' ASME IDETC, 2015.
+\item  T. Furukawa, {\bf K. Takami}, X. Tong, D. Watman, A. Hamed, R. Ranasinghe and G. Dissayanake, ``Map-based Navigation of an Autonomous Car Using Grid-based Scan-to-Map Matching,'' ASME IDETC, 2015.
 
 \item  {\bf K. Takami} and T. Furukawa,``High-Resolution Deformation Measurement System for Fast Rotating Tire,'' ASME IDETC/CIE, 2015.
 
