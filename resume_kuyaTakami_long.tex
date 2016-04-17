@@ -1,14 +1,15 @@
 \documentclass[11pt,letter]{article}
 %	options include 12pt or 11pt or 10pt
 %	classes include article, report, book, letter, thesis
+\usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{geometry}
 \usepackage{tocloft}
-\usepackage[colorlinks=false,linkcolor=black]{hyperref}
+\usepackage[colorlinks=false,linkcolor=black,hidelinks]{hyperref}
 \geometry{
-	a4paper,
+%	a4paper,
 %	total={170mm,257mm},
 	left=20mm,
 	right = 20mm,
@@ -19,7 +20,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot{}
 \fancyhead{}
-\fancyfoot[C]{Kuya Takami -- Page \thepage\ of \pageref{LastPage} -- Curriculum Vitae}
+\fancyfoot[C]{Kuya Takami -- Page \thepage\ of \pageref{LastPage} -- Resume}
 \pagestyle{fancy}
 \newcommand{\job}[6]{
 	\begin{tabbing}
@@ -35,7 +36,7 @@
 }
 
 \begin{document}
-{\bf \Large \noindent Kuya Takami}\vspace{-2mm}\\
+{\bf \huge \noindent Kuya Takami Ph.D.}\vspace{-2mm}\\
 \rule{\textwidth}{1.7pt}
 
 \parbox{0.4\textwidth}{ % First block
@@ -49,12 +50,11 @@
 \parbox{0.4\textwidth}{ % Second block
 	\begin{tabbing} % Enables tabbing
 		\hspace{1cm} \= \hspace{4cm} \= \kill % Spacing within the block
-		\> Updated: March 07, 2016 \\ % Home phone
+		\> Updated: April 15, 2016 \\ % Home phone
 		\> Email:\href{mailto:kuya@vt.edu}{\tt kuya@vt.edu}  \\ % Mobile phone
 		\> \href{http://www.kuyatakami.com}{\tt http://www.kuyatakami.com}
 	\end{tabbing}
 }\\
-
 \parbox{0.7\textwidth}{
 \begin{tabbing}
 	\hspace{1cm} \= \kill
@@ -63,9 +63,10 @@
 \end{tabbing}
 }
 \\
+\vspace{-5mm}
 \begin{tabbing}
-	\hspace{3cm}\=\kill
-	\>  {\bf EDUCATION}
+	\hspace{2cm}\=\kill
+	\>  {\bf \Large EDUCATION}
 \end{tabbing}
 \begin{tabbing}
 	\hspace{3cm} \= \kill
@@ -87,31 +88,32 @@
 \end{tabbing}
 
 \begin{tabbing}
-	\hspace{3cm}\=\kill
-	\>  {\bf AWARDS AND HONORS}
+	\hspace{2cm}\=\kill
+	\>  {\bf \Large AWARDS AND HONORS}
 \end{tabbing}
 \begin{tabbing}
-	\hspace{3cm} \= \kill
+	\hspace{1cm} \= \kill
 	2015 \> ASME:IDETC/CIE Best Student Paper Award\\
-	2014 \> Pratt Graduate Fellowship\\
+	2014 \> Pratt Graduate Fellowship$\ddagger$\\
+	2012 \> Pratt Graduate Fellowship$\ddagger$\\
+	2011 \> Pratt Graduate Fellowship$\ddagger$\\
+	2007 \> Most Outstanding Physics Award$\dagger$\\
 	\> 	$\ddagger$: Awarded to students who are aggressively recruited by other top engineering colleges\\
-	2012 \> Pratt Graduate Fellowship\\
-	2011 \> Pratt Graduate Fellowship\\
-	2007 \> Most Outstanding Physics Award\\
-	\> $\dagger$: Scholarship to the best student in two semester physics courses at University of Wisconsin-EC\\
+	 \> $\dagger$: Scholarship to the best student in physics courses at University of Wisconsin-EC\\
 \end{tabbing}
 
 \begin{tabbing}
-	\hspace{3cm}\=\kill
+	\hspace{2cm}\=\kill
 	\>  {\bf PRIOR EMPLOYMENT}
 \end{tabbing}
 \begin{tabbing}
 	\hspace{3cm} \= \kill
 	10/2015 - Present \> {\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }\\
-	\> {\bfseries Postdoctoral Research Fellow}\\
-	\>	Computational Multiphysics and Systems Lab\\
+	\> {\bfseries Postdoctoral Research Fellow}	Computational Multiphysics and Systems Lab\\
 	\> Professor Tomonari Furuakawa\\
-	\> \hspace{-1cm}\begin{minipage}{0.9\textwidth}
+\end{tabbing}
+\vspace{-1cm}
+%	\begin{minipage}{0.9\textwidth}
 			\begin{itemize}
 				\item Primary researcher on National Science Foundation EAGER project, non-line-of-sight (NLOS) target localization in an unknown environment.
 				\begin{itemize}
@@ -119,26 +121,24 @@
 					\item Collaboration with Daniel Kish, president of World Access for the Blind, for perception of acoustic diffraction and reflection signal processing for human echolocation experts.
 					\item Grant proposal writing for National Robotics Initiative (NRI) NSF16-517 with Dr. Furukawa.
 				\end{itemize}
-				\item Leader of Mohamed Bin Zayed International Robotics Challenge 2017 mobile manipulator team for the Challenge 2. The project consists of perception, navigation, and manipulation based on actual mobile robots to operate the valve with tools.
-				\item Developed and implemented an FPGA based high-resolution imaging system with the integration to tire testing machine.
+				\item Leader of Mohamed Bin Zayed International Robotics Challenge 2017 team for the Challenges. The project consists of perception, navigation, and manipulation based on actual mobile robots to operate the valve with tools.
+%				\item Developed and implemented an FPGA based high-resolution imaging system with the integration to tire testing machine.
 				\item Developing an autonomous car and associative technologies including new sensors for a project sponsored by General Motors and Murata Manufacturing. Advising one MS student for the NSF EAGER project and mentoring a senior design project, Self-Driving Vehicle Team, consisting of nine senior students.
 			\end{itemize}
-	\end{minipage}
-
-\end{tabbing}
+%	\end{minipage}
+%\end{tabbing}
 
 \begin{tabbing}
 	\hspace{3cm} \= \kill
-	08/2011 - 09/2015 \> VT\\
-	\> Graduate Research Assistant/ *Graduate Teaching Assistant\\
-	\> \begin{minipage}{0.8\textwidth}
+	08/2011 - 09/2015 \> VT {\bf Graduate Research Assistant/ *Graduate Teaching Assistant}\\
+	\>\hspace{-2cm}\begin{minipage}{0.9\textwidth}
 		\begin{itemize}
 			\item Developed NLOS hybrid optical/acoustical target localization scheme to model and predict the state of sound source in a complex environment (2011-2015).
 			\item Modeled sound reflection/diffraction based NLOS target estimation for mobile robot localization (2011-2015).
 			\item Assisted underwater autonomous navigation project on sonar localization simulation using simultaneous localization and mapping (SLAM) funded by Office of Naval Research (2011-2012).
 			\item Worked on real-time autonomous driving using Grid-based SLAM in collaboration with ZMP and University of Technology, Sydney (2012-2014).
 			\item Worked on tire noise prediction model entailing mathematical formulations, and fluid-solid interaction modeling funded by NSF Center for Tire Research (2012-2015).
-			\item *Instructor (ME 2024-Engineering Design and Economics): Lectured mechanical engineering students on product development (Fall 2013).
+%			\item *Instructor (ME 2024-Engineering Design and Economics): Lectured mechanical engineering students on product development (Fall 2013).
 			%\item *Laboratory Assistant (ME4005/4006): Instructed and organized junior/ senior mechanical engineering labs and graded technical reports.
 			\item *Project Advisor (ME4015/4016): Supervised senior design project on autonomous driving, and automotive alternator design and experimental validation (2011-2012).
 		\end{itemize}
@@ -146,20 +146,20 @@
 \end{tabbing}
 
 \begin{tabbing}
-	\hspace{3cm} \= \kill
+	\hspace{3.5cm} \= \kill
 	05/2014 -- 08/2014 \> {\bf Bridgestone Americas, Inc}\hfill{Akron, OH}\\
 	\> {\bf Advanced Tire Technology - Research intern}\\
-	\> \begin{minipage}{0.8\textwidth}
+	\> \hspace{-2.5cm}\begin{minipage}{0.9\textwidth}
 		\begin{itemize}
 			\item Developed tire noise analysis procedure and designed and implemented tire noise experimental device based on an FPGA controller.
 		\end{itemize}
 	\end{minipage}
 \end{tabbing}
 \begin{tabbing}
-	\hspace{3cm} \= \kill
+	\hspace{3.5cm} \= \kill
 	01/2013 - 07/2013 \> {\bf ZMP, Inc}\hfill{Tokyo, Japan }\\
 	\> {\bf Research Engineer in Autonomous Vehicles}\\
-	\> \begin{minipage}{0.8\textwidth}
+	\> \hspace{-2.5cm} \begin{minipage}{0.9\textwidth}
 		\begin{itemize}
 			\item Assisted programming and hardware development for an autonomous driving vehicle, including data acquisition, implementation of SLAM, and vehicle modeling/control.
 			\item Designed and constructed a quadrupedal machine learning-based evolving robot by calculating kinematics and specifying components.
@@ -167,35 +167,41 @@
 	\end{minipage}
 \end{tabbing}
 \begin{tabbing}
-	\hspace{3cm} \= \kill
+	\hspace{3.5cm} \= \kill
 	 03/2009 - 08/2011 \>{\bf University of Wisconsin-Madison}\hfill{Madison, WI}{ (03/2009 - 08/2011)}\\
 	 \> {\bf Graduate Research Assistant for Engine Research Center}\\
-	 \> \begin{minipage}{0.8\textwidth}
+	 \> \hspace{-2.5cm}\begin{minipage}{0.9\textwidth}
 	 	\begin{itemize}
 	 		\item Conducted laser and fiber optics centered research optimizing optical element design in harsh environments.
 	 		\item Developed a noninvasive laser grid tomography temperature measurement system for jet and IC engines.
 	 	\end{itemize}
 	 \end{minipage}
 \end{tabbing}
-\begin{tabbing}
-	\hspace{3cm} \= \kill
-	05/2014 -- 08/2014 \> {\bf University of Wisconsin Hospital}\hfill{Madison, WI}{ {(08/2007 - 12/2008)}}\\
-	\> {\bf MRI Research Assistant for Radiology Department}\\
-	\> Studied MRI-based knee analysis, quantified quality of the image, and determined change of cartilage volumes.
-\end{tabbing}
+%\begin{tabbing}
+%	\hspace{3.5cm} \= \kill
+%	05/2014 -- 08/2014 \> {\bf University of Wisconsin Hospital}\hfill{Madison, WI}{ {(08/2007 - 12/2008)}}\\
+%	\> {\bf MRI Research Assistant for Radiology Department}\\
+%	\> 	\hspace{-2cm}\begin{minipage}{0.9\textwidth}Studied MRI-based knee analysis, quantified quality of the image, and determined change of cartilage volumes.
+%	\end{minipage}
+%\end{tabbing}
 
 
-\begin{tabbing}
-	\hspace{3cm}\=\kill
-	\>  {\bf peer reviewed publications}
-\end{tabbing}
+%\begin{tabbing}
+%	\hspace{3cm}\=\kill
+%	\>  {\bf peer reviewed publications}
+%\end{tabbing}
+%
+%\begin{tabbing}
+%	\hspace{3cm}\=\kill
+%	\>  {\bf teaching}
+%\end{tabbing}
 
-\begin{tabbing}
-	\hspace{3cm}\=\kill
-	\>  {\bf teaching}
-\end{tabbing}
-
-\section*{TECHNICAL STRENGTH}\vspace{-3mm}\rhead{Takami-CV}
+%\section*{TECHNICAL STRENGTH}\vspace{-3mm}
+\rhead{Takami-Resume}
+	\begin{tabbing}
+		\hspace{2cm}\=\kill
+		\>  {\bf \Large TECHNICAL STRENGTH}
+	\end{tabbing}
 \begin{tabbing}
 	\hspace{0cm} \= \kill
 	\> \begin{minipage}{0.56\columnwidth}
@@ -214,24 +220,32 @@
 \end{tabbing}
 
 
-
-\section*{EXTRACURRICULAR EXPERIENCE}\vspace{-3mm}
+\begin{tabbing}
+	\hspace{2cm}\=\kill
+	\>  {\bf \Large EXTRACURRICULAR EXPERIENCE}
+\end{tabbing}
+%\section*{EXTRACURRICULAR EXPERIENCE}\vspace{-3mm}
 \begin{tabbing}
 	\hspace{3cm} \= \kill
 	2013 -- 2015 \> Mechanical Engineering Graduate Student Council\\
 	2013 -- 2015 \> Mechanical Engineering Graduate Ambassador\\
-	\> President of VT Slackline Club (2011-2014)\\
-	\>	 President of Japanese Conversation Group (2012-2015)\\
-	\>	 President of Japanese Cultural Society in University of Wisconsin-EC (2005-2006)\\
-	\> Volunteer  Graduate student mentor (2014-Present)\\
+	2011 -- 2014 \> President of VT Slackline Club\\
+	2012 -- 2015 \>	 President of Japanese Conversation Group\\
+	2005 -- 2006\>	 President of Japanese Cultural Society in University of Wisconsin-EC\\
+	2014 -- 2015 \> Volunteer  Graduate student mentor\\
 	\> Society National Society of Leadership and Success, Biomedical Engineering Society
 \end{tabbing}
 
-\section*{PUBLICATIONS}
-\begin{tabbing}
+%\section*{PUBLICATIONS}
 
+\begin{tabbing}
+	\hspace{2cm}\=\kill
+	\>  {\bf \Large PUBLICATIONS}
 \end{tabbing}
-\begin{itemize}
+\vspace{-1.2cm}
+\begin{tabbing}
+\end{tabbing}
+\begin{itemize}[leftmargin=*]
 		\item {\bf K. Takami}, T. Furukawa, M. Kumon, D. Kimoto, and G. Dissanayake. ``Estimation of a nonvisible field-of-view mobile target incorporating optical and acoustic sensors,'' Autonomous Robots, 2015.
 	\item {\bf K. Takami}, T. Furukawa, M. Kumon, and G. Dissanayake. ``Non-Field-of-View Acoustic Target Estimation in Complex Indoor Environment,'' Springer Tracts in Advanced Robotics, 2015.
 	\item  {\bf K. Takami}, T. Furukawa, M. Kumon, and L. Mak,``Non-Field-of-View Indoor Sound Source Localization based on Reflection and Diffraction,'' Multi-sensor Integration and Fusion, IEEE, 2015.
