@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper]{article}
+\documentclass[10pt,letterpaper]{article}
 \usepackage{geometry}
 \usepackage{url}
 \usepackage{hanging}
@@ -17,6 +17,11 @@
 \usepackage{xcolor}
 \usepackage{helvet}
 \usepackage{hyperref}
+\usepackage{etoolbox}
+
+\newtoggle{resume}
+\toggletrue{resume}
+%\togglefalse{resume}
 \renewcommand{\familydefault}{\sfdefault}
 
 \def\name{Kuya Takami, Ph.D.}
@@ -42,7 +47,7 @@
 
 \geometry{
 %  body={7in, 9in}
-  margin=1in,
+  margin=0.8in,
   left=20mm,
   right=20mm
 }
@@ -51,8 +56,7 @@
 \pagestyle{fancy}
 \markright{\name}
 %\thispagestyle{empty}
-\lhead{Kuya Takami}
-\rhead{\url{kuyatakami.com}}
+
 % Custom section fonts
 \usepackage{sectsty}
 \sectionfont{\rmfamily\mdseries\Large}
@@ -60,10 +64,20 @@
 
 \setlength\parindent{0em}
 
-\newcommand{\sect}[1]{\vspace{8mm}{\centering {\bf \large \scshape \uppercase{#1}} \par}  {\color{blue} \vskip 2mm \hrule height 1pt}\vspace{2mm}}
+\newcommand{\sect}[1]{\vspace{3mm}{\centering {\bf \large \scshape \uppercase{#1}} \par}  {\color{blue} \vskip 2mm \hrule height 1pt}\vspace{2mm}}
+
+\fancyhead{}% Remove all header contents
+% \cfoot{Page \thepage\ of \pageref{LastPage}}% Page X of Y in the footer (centered)
+\fancypagestyle{noheader}{%
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
 \begin{document}
 
+  \thispagestyle{noheader}
   \begin{minipage}{0.7\linewidth}
+    % \vspace{-2cm}
   {\vspace{1cm}\fontfamily{qpl}\selectfont \Huge {\scshape Kuya Takami}, Ph.D.}\\
   %Email:  \href{mailto:kuya@vt.edu}{\tt kuya@vt.edu} \\
 \vspace{5mm}
@@ -90,9 +104,10 @@ Department of Mechanical and Aerospace Engineering\\
   \end{minipage}
 
 \vspace{5mm}
-% \centering{\bf \large \scshape EDUCATION}
-%   \vskip 2mm
-%   {\color{blue} \hrule height 1pt}
+
+\lhead{Kuya Takami}
+\rhead{\url{kuyatakami.com}}
+
 \sect{education}
   {\centering
   \begin{minipage}{0.8\columnwidth}
@@ -111,18 +126,21 @@ Department of Mechanical and Aerospace Engineering\\
   \end{minipage}
   \par}
 
-  % \section*{APPOINTMENTS}\vspace{-3mm}
+  \sect{Research interests}
+  \centerline{Robotics, Perception, Localization and Mapping, Mobile robots}
+
   % \hrule
   \sect{appointments}
   \MakeUppercase{\bf George Washington University}\hfill{Washington DC}\\
   \quad {\bf Postdoctoral Research Fellow}\hfill {(08/2016-Present)}\\
   Flight Dynamics and Control Lab with Professor Taeyoung Lee\\
   \begin{itemize}
-    \item Probabilistic multi-UAV autonomous exploration and Simultaneous Localization and Mapping.
+    \item Conducting research on probabilistic multi-UAV (Unmanned Aerial Vehicle) autonomous exploration and Simultaneous Localization and Mapping.
   \end{itemize}
   \MakeUppercase{\bf Virginia Tech}\hfill{Blacksburg, VA }\\
   \quad {\bf Postdoctoral Research Fellow}\hfill {(10/2015 \- 07/2016)}\\
   Computational Multiphysics and Systems Lab with Professor Tomonari Furuakwa\\
+
   \begin{itemize}
   	\item Primary researcher on National Science Foundation EAGER project, non-line-of-sight (NLOS) target localization in an unknown environment.
   	\begin{itemize}
@@ -134,6 +152,7 @@ Department of Mechanical and Aerospace Engineering\\
   	\item Developed and implemented an FPGA based high-resolution imaging system with the integration to tire testing machine at Toyo Rubber.
   	\item Developing an autonomous car and associative technologies including new sensors for a project sponsored by General Motors and Murata Manufacturing. \item Advising one MS student for the NSF EAGER project and mentoring a senior design project, Self-Driving Vehicle Team, consisting of nine senior students.
   \end{itemize}
+
   %\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }
   \quad {\bf Graduate Research Assistant/ *Graduate Teaching Assistant}\hfill {(08/2011-09/2015)}\\
   \begin{itemize}
@@ -170,10 +189,10 @@ Department of Mechanical and Aerospace Engineering\\
   \item Studied MRI-based knee analysis, quantified quality of the image, and determined change of cartilage volumes.
   \end{itemize}
 
-
-\pagebreak
-\sect{Journal Papers}
+\sect{Selected Journal Papers}
   \begin{enumerate}
+  \item E. Kaufman, {\bf K. Takami}, T. Lee, Z. Ai. ``Autonomous Exploration with Exact Inverse Sensor Models,'' Springer Journal of Intelligent \& Robotic Systems, (under review)
+
   \item {\bf K. Takami}, L. Hangxin, T. Furukawa, M. Kumon, G. Dissanayake. ``Reflection and Diffraction Signals based Recursive Bayesian Estimation for Non-Field-of-View Target,'' (in preparation).
 
   \item {\bf K. Takami}, T. Furukawa. ``Development of a High-Resolution Measurement System for Rotating Deformable Body,'' Journal of Visualization (under review).
@@ -187,7 +206,7 @@ Department of Mechanical and Aerospace Engineering\\
   \item A. Xinliang, T. Kraetschmer, {\bf K. Takami}, S. T. Sanders, L. Ma, et al. ``Validation of temperature imaging by H$_2$O absorption spectroscopy using hyperspectral tomography in controlled experiments,'' Journal of Applied Optics, 2011.
 \end{enumerate}
 
-\sect{Conference papers and workshop}
+\sect{Selected Conference papers and workshop}
 \begin{enumerate}
 	\item {\bf K. Takami}, H. Liu, T. Furukawa, M. Kumon, and G. Dissanayake, ``Non-Field-of-View Sound Source Localization	Using Diffraction and Reflection Signals,'' IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2016
   \item {\bf K. Takami}, H. Liu, T. Furukawa, M. Kumon, and G. Dissanayake, ``Recursive Bayesian Estimation of NFOV Target Using Diffraction and Reflection Signals,'' ISIF International Conference on Information Fusion, 2016
@@ -198,17 +217,21 @@ Department of Mechanical and Aerospace Engineering\\
 
 
   \item  {\bf K. Takami} and T. Furukawa,``High-Resolution Deformation Measurement System for Fast Rotating Tires Towards Noise Prediction,'' Euronoise., 2015.
+  \iftoggle{resume}{}{
 
   \item M. Kumon, D. Kimoto, {\bf K. Takami} and T. Furukawa, ``Acoustic recursive Bayesian estimation for non-field-of-view targets,'' In Image Analysis for Multimedia Interactive Services (WIAMIS), IEEE, 2013.
-
+}
   \item M. Kumon, D. Kimoto, {\bf K. Takami} and T. Furukawa. ``Bayesian non-field-of-view target estimation incorporating an acoustic sensor,'' IEEE/RSJ International Conference on Intelligent Robots and Systems  (IROS), 2013.
+  \iftoggle{resume}{}{
 
   \item {\bf K. Takami}, S. Taheri, M. Taheri and T. Furukawa, ``Prediction of Railroad Track Foundation Defects Using Wavelets,'' Joint Rail Conference, ASME, 2013.
+  }
 \end{enumerate}
 
   % \vspace{-5mm}
   % \section*{HONORS AND AWARDS}\vspace{-3mm}
   % \hrule
+
   \sect{honors and awards}
   \hspace{0mm}
   \begin{minipage}{\columnwidth}
@@ -226,13 +249,14 @@ Department of Mechanical and Aerospace Engineering\\
   2014 & Pratt Graduate Fellowship$^\ddagger$\\
   \end{tabular}
   \end{minipage}
-  \\
+
   \vspace{5mm}
   $\dagger$: Scholarship to the best student in two semester physics courses at University of Wisconsin-EC\\
   $\ddagger$: Awarded to students who are aggressively recruited by other top engineering colleges\\
   \end{minipage}
 
-
+\iftoggle{resume}{}
+{
   % \section*{TECHNICAL STRENGTH}\vspace{-3mm}
   % \hrule
 
@@ -245,13 +269,13 @@ Department of Mechanical and Aerospace Engineering\\
   % \section*{PUBLICATIONS}\vspace{-3mm}
   % \hrule
 
-
 \sect{invited talks and guest lectures}
 \begin{itemize}
   \item ``High-Resolution Deformation Measurement System for Fast Rotating Tires Towards Noise Prediction'' speaker at Apollo Tyres Global R\&D, Netherland, Mar. 2015
   \item ``High-Resolution Deformation Measurement System for Fast Rotating Tires Towards Noise Prediction'' speaker at Applied Mechanics at Twente University, Netherland, Mar. 2015
   \item ``Visualization system for Tire rolling rig'', speaker at Bridgestone, Aug. 2014
 \end{itemize}
+
 
 \sect{miscellaneous}
 {\bf Grant proposal}:\\
@@ -272,15 +296,15 @@ Yung Wang: Virginia Tech Undergraduate\\
 \item {\bf Instructor} (ME 2024-Engineering Design and Economics): Lectured mechanical engineering students on product development (Fall 2013).
 \item {\bf Project Advisor } (ME4015/4016): Supervised senior design project on autonomous driving, and automotive alternator design and experimental validation (2011-2012).
 \end{itemize}
-
+}
 %\item *Laboratory Assistant (ME4005/4006): Instructed and organized junior/ senior mechanical engineering labs and graded technical reports.
 
  \sect{technical strength}
    \begin{minipage}{0.58\columnwidth}
    \begin{tabular}{ll}
-   Computer Languages:& C/C++, Java\\
-   Software:& ROS, MATLAB, Visual Studio \\
-   CAD \& FEA:& SolidWorks, PTC Creo, Abaqus\\
+   Computer Languages:& C/C++ (8/10), Python (7/10)\\
+   Software:& ROS, MATLAB \\
+   CAD \& FEA:& SolidWorks, PTC Creo\\
    \end{tabular}
    \end{minipage}
    \begin{minipage}{0.35\columnwidth}
@@ -290,6 +314,8 @@ Yung Wang: Virginia Tech Undergraduate\\
    \end{tabular}
    \end{minipage}
 
+
+\iftoggle{resume}{}{
  \sect{extracurricular experience}
  \begin{minipage}{\columnwidth}
  \begin{tabular}{ l  l }
@@ -315,6 +341,7 @@ Yung Wang: Virginia Tech Undergraduate\\
   \item Dr. Scott Sanders\\Professor\\Department of Mechanical Engineering, University of Wisconsin-Madison\\
   Email: stsanders@wisc.edu
 \end{itemize}
+}
   %\fancyfoot{
   %\begin{center}
   %  \begin{footnotesize}
