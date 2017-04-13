@@ -1,4 +1,4 @@
-\documentclass[10pt,letterpaper]{article}
+\documentclass[11pt,letterpaper]{article}
 \usepackage{geometry}
 \usepackage{url}
 \usepackage{hanging}
@@ -15,7 +15,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[sc,osf]{mathpazo}
 \usepackage{xcolor}
-\usepackage{helvet}
+% \usepackage{helvet}
 \usepackage{hyperref}
 \usepackage{etoolbox}
 
@@ -31,7 +31,7 @@
 \def\footerlink{http://jblevins.org/projects/cv-template/}
 \fancyfoot{}
 \fancyhead{}
-\fancyfoot[r]{Page \thepage\ of\pageref*{LastPage}}
+\fancyfoot[r]{Page \thepage\ of \pageref*{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrulewidth}{0.5pt}
 % The following metadata will show up in the PDF properties
@@ -39,7 +39,7 @@
   colorlinks = true,
   urlcolor = blue,
   pdfauthor = {\name},
-  pdfkeywords = {economics, statistics, mathematics},
+  pdfkeywords = {engieering, robotics, mathematics},
   pdftitle = {\name: Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
@@ -64,7 +64,7 @@
 
 \setlength\parindent{0em}
 
-\newcommand{\sect}[1]{\vspace{3mm}{\centering {\bf \large \scshape \uppercase{#1}} \par}  {\color{blue} \vskip 2mm \hrule height 1pt}\vspace{2mm}}
+\newcommand{\sect}[1]{\vspace{2mm}{\centering {\bf \large \scshape \uppercase{#1}} \par}  {\color{blue} \vskip 2mm \hrule height 1pt}\vspace{2mm}}
 
 \fancyhead{}% Remove all header contents
 % \cfoot{Page \thepage\ of \pageref{LastPage}}% Page X of Y in the footer (centered)
@@ -78,14 +78,14 @@
   \thispagestyle{noheader}
   \begin{minipage}{0.7\linewidth}
     % \vspace{-2cm}
-  {\vspace{1cm}\fontfamily{qpl}\selectfont \Huge {\scshape Kuya Takami}, Ph.D.}\\
+  {\vspace{1cm}\fontfamily{qpl}\selectfont \huge {\scshape Kuya Takami}, Ph.D.}\\
   %Email:  \href{mailto:kuya@vt.edu}{\tt kuya@vt.edu} \\
 \vspace{5mm}
 {\bf Postdoctoral Research Fellow} \quad George Washington University\\
 Department of Mechanical and Aerospace Engineering\\
   % Website:  \href{http://www.me.vt.edu/cms/people/kuya-takami}{\tt http://www.me.vt.edu/cms/people/kuya-takami} \\
   %\hspace{4mm}
-  %GitHub: \href{https://github.com/ku-ya}{\tt https://github.com/ku-ya}\\
+  GitHub: \href{https://github.com/ku-ya}{\tt https://github.com/ku-ya}\\
   %\hspace{4mm}
   %LinkedIn:  \href{https://www.linkedin.com/in/kuyat}{\tt ttps://www.linkedin.com/in/kuyat} \\
 
@@ -133,7 +133,7 @@ Department of Mechanical and Aerospace Engineering\\
   % \hrule
   \sect{appointments}
   \MakeUppercase{\bf George Washington University}\hfill{Washington DC}\\
-  \quad {\bf Postdoctoral Research Fellow}\hfill {(08/2016-Present)}\\
+  \quad {\bf Postdoctoral Research Fellow}\hfill {(08/2016 - Present)}\\
   Flight Dynamics and Control Lab with Professor Taeyoung Lee\\
   \begin{itemize}
     \item Conducting research on probabilistic multi-UAV (Unmanned Aerial Vehicle) autonomous exploration and Simultaneous Localization and Mapping.
@@ -141,7 +141,7 @@ Department of Mechanical and Aerospace Engineering\\
     \item Creating probabilistic framework based on time dependent sensor fusion.
   \end{itemize}
   \MakeUppercase{\bf Virginia Tech}\hfill{Blacksburg, VA }\\
-  \quad {\bf Postdoctoral Research Fellow}\hfill {(10/2015 \- 07/2016)}\\
+  \quad {\bf Postdoctoral Research Fellow}\hfill {(10/2015 - 07/2016)}\\
   Computational Multiphysics and Systems Lab with Professor Tomonari Furuakwa\\
 
   \begin{itemize}
@@ -157,7 +157,7 @@ Department of Mechanical and Aerospace Engineering\\
   \end{itemize}
 
   %\MakeUppercase{\bf Virginia Polytecnic Institute and State University}\hfill{Blacksburg, VA }
-  \quad {\bf Graduate Research Assistant/ *Graduate Teaching Assistant}\hfill {(08/2011-09/2015)}\\
+  \quad {\bf Graduate Research Assistant/ *Graduate Teaching Assistant}\hfill {(08/2011 - 09/2015)}\\
   \begin{itemize}
   \item Developed NLOS hybrid optical/acoustical target localization scheme to model and predict the state of sound source in a complex environment (2011-2015).
   \item Modeled sound reflection/diffraction based NLOS target estimation for mobile robot localization (2011-2015).
@@ -222,7 +222,6 @@ Department of Mechanical and Aerospace Engineering\\
 
   \item  {\bf K. Takami} and T. Furukawa,``High-Resolution Deformation Measurement System for Fast Rotating Tires Towards Noise Prediction,'' Euronoise., 2015.
   \iftoggle{resume}{}{
-
   \item M. Kumon, D. Kimoto, {\bf K. Takami} and T. Furukawa, ``Acoustic recursive Bayesian estimation for non-field-of-view targets,'' In Image Analysis for Multimedia Interactive Services (WIAMIS), IEEE, 2013.
 }
   \item M. Kumon, D. Kimoto, {\bf K. Takami} and T. Furukawa. ``Bayesian non-field-of-view target estimation incorporating an acoustic sensor,'' IEEE/RSJ International Conference on Intelligent Robots and Systems  (IROS), 2013.
