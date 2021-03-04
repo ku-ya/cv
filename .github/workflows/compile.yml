@@ -17,7 +17,7 @@ jobs:
           latexmk_use_lualatex: true
       - name: Move compiled files
         run: |
-          mkdir build
+          rm -f build/*
           mv *.pdf build
       - name: Push the file back to repo
         run: |
