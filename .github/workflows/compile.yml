@@ -11,8 +11,6 @@ jobs:
         with:
           root_file: |
             cv_takami.tex
-            CV_KuyaTakami.tex
-            resume_kuyaTakami_long.tex
             resume_takami.tex
           latexmk_use_lualatex: true
       - name: Move compiled files
