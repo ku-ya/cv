@@ -15,6 +15,17 @@ jobs:
             resume_kuyaTakami_long.tex
             resume_takami.tex
           latexmk_use_lualatex: true
+      - name: Move compiled files
+        run: |
+          mkdir build
+          mv *.pdf build
+      - name: Push the file back to repo
+        run: |
+           git config --global user.name 'Kuya Takami'
+           git config --global user.email 'kuya@vt.edu'
+           git add build
+           git commit -m "Update compiled files"
+           git push
       - uses: actions/upload-artifact@v2
         with:
           name: compiled_pdfs
