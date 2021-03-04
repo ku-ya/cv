@@ -26,7 +26,3 @@ jobs:
            git add build
            git commit -m "Update compiled files"
            git push
-      - uses: actions/upload-artifact@v2
-        with:
-          name: compiled_pdfs
-          path: ./*.pdf
