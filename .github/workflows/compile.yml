@@ -12,8 +12,10 @@ jobs:
           root_file: |
             cv_takami.tex
             CV_KuyaTakami.tex
-          latexmk_use_xelatex: true
+            resume_kuyaTakami_long.tex
+            resume_takami.tex
+          latexmk_use_lualatex: true
       - uses: actions/upload-artifact@v2
         with:
           name: compiled_pdfs
-          path: /*.pdf
+          path: *.pdf
