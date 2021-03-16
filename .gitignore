@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/latex
 
 ### LaTeX ###
+## Output
+*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
